@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="mango-clone-app-main" target="17" />
+      <module name="mango-clone-app-main" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
