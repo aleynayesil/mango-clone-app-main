@@ -33,7 +33,7 @@ public class User extends AbstractIdEntity implements UserDetails{
     private String email;
 
     @Column(name = "user_name")
-    private String userName;
+    private String username;
 
     @Column(name = "address")
     private String address;
@@ -65,6 +65,10 @@ public class User extends AbstractIdEntity implements UserDetails{
     @Column(name = "_update_date")
     private LocalDateTime updateDate;
 
+    @OneToOne(targetEntity = Token.class, fetch = FetchType.EAGER)
+    @JoinColumn(nullable = false, name = "token_id")
+    private Token token;
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         SimpleGrantedAuthority authority =
@@ -80,7 +84,7 @@ public class User extends AbstractIdEntity implements UserDetails{
 
     @Override
     public String getUsername() {
-        return email;
+        return username;
     }
 
     @Override

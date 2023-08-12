@@ -15,7 +15,7 @@ public enum Country {
     UKRAINE,
     AUSTRIAN,
     ICELAND,
-    KOREAN,
+    KOREA,
     JAPAN,
     CHINA
 }
